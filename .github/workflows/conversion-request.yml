@@ -76,7 +76,9 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt-get install -y moreutils zip jq
+          sudo apt-get install -y moreutils zip
+          wget -O /usr/local/bin/jq https://github.com/stedolan/jq/releases/latest/download/jq-linux64
+          chmod +x /usr/local/bin/jq
           yarn global add spritesheet-js
       - name: Convert Pack
         id: convert-pack
