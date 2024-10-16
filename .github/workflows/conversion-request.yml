@@ -1,5 +1,8 @@
-name: sao cx dc
-on:
+name: sao cx dcon
+on
+  push:
+    branches:
+      - main
   issues:
     types:
       - labeled
